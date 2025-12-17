@@ -1,0 +1,329 @@
+{
+  "navbar": {
+    "home": "Home",
+    "all_products": "Products",
+    "contact_us": "Contact",
+    "my_orders": "My Orders",
+    "logout": "Logout",
+    "login": "Login",
+    "language": "Language",
+    "view_cart": "View Cart",
+    "site_name": "MY STORE",
+    "items": "Items",
+    "subtotal": "Subtotal",
+    "admin": "ADMIN",
+    "view_dashboard": "View Dashboard",
+    "welcome": "Welcome",
+    "logout_success": "You have successfully logged out!"
+  },
+  "hero": {
+    "slogan1": "Your place to choose",
+    "slogan2": "Enjoy!",
+    "shop_now": "Shop Now",
+    "tags": ["Cellphone", "Electronics", "Bag", "Clothing", "Jewelry", "Anything!"]
+  },
+  "cart": {
+    "items": "Item",
+    "no_item": "It seems you have no items in the cart.",
+    "explore_more": "Click here to browse the store.",
+    "actions": "Actions",
+    "qty": "Qty:",
+    "total": "Total",
+    "continue": "Continue Shopping",
+    "total_itens": "Total items:",
+    "subtotal": "Subtotal",
+    "tax": "Shipping and other fees will be calculated at checkout",
+    "logintocheckout": "Login to continue",
+    "page_name": "Shopping Cart",
+    "buy": "BUY"
+  },
+  "modal": {
+    "login_modal": "Login",
+    "register_modal": "Register"
+  },
+  "loader": {
+    "pls_wait": "Please wait, loading..."
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "products": "Products"
+  },
+  "productfilter": {
+    "categories": "Categories",
+    "all_categories": "All",
+    "brand": "Brand",
+    "all_brands": "All",
+    "price": "Price",
+    "clear_filters": "Clear Filters"
+  },
+  "productlist": {
+    "products_found": "Products found",
+    "sort_by": "Sort by:",
+    "sort_latest": "Latest",
+    "sort_lowest_price": "Lowest Price",
+    "sort_highest_price": "Highest Price",
+    "sort_a2z": "Name (A - Z)",
+    "sort_z2a": "Name (Z - A)",
+    "show_filters": "Show Filters",
+    "back_to_top": "Back to Top"
+  },
+  "search": {
+    "search_bar": "Search"
+  },
+  "contact": {
+    "page_title": "Contact",
+    "info_title": "Contact Information",
+    "info_description": "Fill out the form or reach us through other channels",
+    "form_title": "Contact Us",
+    "name_label": "Name:",
+    "name_placeholder": "Full Name",
+    "email_label": "Email:",
+    "email_placeholder": "Active Email",
+    "subject_label": "Subject:",
+    "subject_placeholder": "Subject",
+    "message_label": "Message:",
+    "send_message": "Send Message",
+    "sending": "Sending...",
+    "success_message": "Message sent successfully! We will contact you soon.",
+    "error_message": "Something went wrong. Please try again later."
+  },
+  "productdetails": {
+    "title": "Product Details",
+    "back_to_products": "Back to all products",
+    "sku": "SKU",
+    "brand": "Brand",
+    "add_to_cart": "Add to Cart",
+    "reviews": "Reviews",
+    "first_review": "Be the first to review this product"
+  },
+  "login": {
+    "welcome": "Welcome",
+    "google_button": "Sign in with Google",
+    "or_email": "or sign in with email",
+    "email_label": "Email Address",
+    "password_label": "Password",
+    "forgot_password": "Forgot Password?",
+    "login_button": "Login",
+    "success": "Login successful",
+    "modal_title": "SORRY, this feature is temporarily disabled",
+    "modal_text": "Still want to try the app? Contact us:",
+    "modal_emailtext": "email@test.com"
+  },
+  "register": {
+    "title": "Create a New Account",
+    "email_label": "Email Address",
+    "password_label": "Password",
+    "confirm_password_label": "Confirm Password",
+    "register_button": "Register",
+    "success": "Registration successful",
+    "password_mismatch": "Passwords do not match"
+  },
+  "gridview": {
+    "no_products": "No products found",
+    "free_delivery": "Free Delivery",
+    "add_to_cart": "Add to Cart"
+  },
+  "listview": {
+    "no_products": "No products found",
+    "free_delivery": "Free Delivery",
+    "add_to_cart": "Add to Cart",
+    "view_details": "View Details"
+  },
+  "notfound": {
+    "warning1": "Sorry for the inconvenience, but there’s nothing here",
+    "warning2": "Maybe you should go back to the store",
+    "link": "Go back!"
+  },
+  "orderhistory": {
+    "loading": "Loading orders...",
+    "loginRequired": "Please login to view your orders.",
+    "title": "My Orders",
+    "error": "Error",
+    "empty": "No orders found.",
+    "order": "Order",
+    "total": "Total",
+    "status": "Status",
+    "date": "Date",
+    "items": "Items",
+    "notAvailable": "—",
+    "noDate": "No date"
+  },
+  "checkout": {
+    "paymentDescription": "Payment of {{amount}} made by {{email}}"
+  },
+  "checkoutdetails": {
+    "breadcrumbCart": "Cart",
+    "breadcrumbCheckout": "Checkout Details",
+    "shippingAddressTitle": "Shipping Address",
+    "calculateShipping": "Calculate Shipping",
+    "fields": {
+      "name": "Name",
+      "line1": "Address",
+      "line2": "Complement",
+      "city": "City/State",
+      "pin_code": "ZIP",
+      "country": "Country",
+      "phone": "Phone"
+    }
+  },
+  "checkoutsuccess": {
+    "success1": "Congratulations, you successfully completed your purchase!",
+    "success2": "Would you like to view your orders?",
+    "order-link": "VIEW ORDERS"
+  },
+  "resetpassword": {
+    "title": "RESET PASSWORD",
+    "description": "Please enter your email for which you no longer remember the password.",
+    "emailLabel": "Email",
+    "submitButton": "Get New Password",
+    "toastCheckEmail": "Check your email for the reset link",
+    "checkEmailMessage": "Check your email for the reset link *(Check Spam)*"
+  },
+  "addproducts": {
+    "titleAdd": "Add New Product",
+    "titleEdit": "Edit Product",
+    "productName": "Product Name",
+    "productPrice": "Product Price",
+    "productCategory": "Product Category",
+    "chooseCategory": "-- Choose a Product Category --",
+    "productBrand": "Product Brand",
+    "productDescription": "Product Description",
+    "productImage": "Product Image",
+    "addButton": "Add Product",
+    "updateButton": "Update Product",
+    "imageUrl": "Image URL",
+    "imagePreviewAlt": "Image Preview",
+    "toastImageSuccess": "Image uploaded successfully",
+    "toastImageError": "Failed to upload image",
+    "toastAddSuccess": "Product added to database successfully",
+    "toastUpdateSuccess": "Product updated successfully",
+    "toastGenericError": "Something went wrong, check the console",
+    "freeShipping": "Free Shipping"
+  },
+  "adminBlacklist": {
+    "title": "Review Blacklist",
+    "delete": {
+      "title": "Delete / Do Not Publish Review",
+      "description": "If the review contains any of these words or phrases, it will NOT be published."
+    },
+    "censor": {
+      "title": "Censor Words / Phrases",
+      "description": "These words will be replaced with ******** in the review."
+    },
+    "input": {
+      "placeholder": "Enter word or phrase",
+      "add": "Add",
+      "removeHint": "Click to remove"
+    },
+    "toast": {
+      "updated": "Blacklist updated",
+      "error": "Error saving"
+    }
+  },
+  "adminhome": {
+    "title": "Admin Dashboard",
+    "earnings": "Earnings",
+    "products": "Products",
+    "orders": "Orders"
+  },
+  "AdminSidebar": {
+    "home": "Home",
+    "allProducts": "All Products",
+    "addProducts": "Add Products",
+    "orders": "Orders",
+    "blacklist": "Blacklist"
+  },
+  "Orders": {
+    "title": "All Orders"
+  },
+  "ViewProducts": {
+    "title": "All Products",
+    "productsFound": "products found",
+    "searchPlaceholder": "Search product...",
+    "noProducts": "NO PRODUCTS FOUND",
+    "toastDeleteSuccess": "Product removed successfully",
+    "table": {
+      "image": "Image",
+      "name": "Name",
+      "category": "Category",
+      "price": "Price",
+      "options": "Options"
+    }
+  },
+  "ChangeOrderStatus": {
+    "title": "Update Order Status",
+    "selectPlaceholder": "-- Select status --",
+    "updateButton": "Update status",
+    "toastSuccess": "Order status changed to {{status}}",
+    "status": {
+      "orderPlaced": "Order Placed",
+      "processing": "Processing",
+      "shipped": "Item(s) Shipped",
+      "delivered": "Item(s) Delivered"
+    }
+  },
+  "OrderStatusChart": {
+    "title": "Order Status",
+    "datasetLabel": "Order Count",
+    "status": {
+      "orderPlaced": "Order Placed",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered"
+    }
+  },
+  "Countdown": {
+    "days": "days",
+    "hours": "hours",
+    "minutes": "min",
+    "seconds": "sec"
+  },
+  "OrderDetailsComponent": {
+    "orderDetails": "Order Details",
+    "orderId": "Order ID",
+    "orderAmount": "Order Amount",
+    "orderStatus": "Order Status",
+    "recipientName": "Recipient Name",
+    "phone": "Phone",
+    "shippingAddress": "Shipping Address",
+    "backToAllOrders": "Back to All Orders"
+  },
+  "OrderTable": {
+    "product": "Product",
+    "actions": "Actions",
+    "qty": "Qty",
+    "total": "Total",
+    "writeReview": "Write a Review"
+  },
+  "Pagination": {
+    "page": "Page",
+    "of": "of"
+  },
+  "ReviewComponent": {
+    "fillCommentAndRating": "Please fill in comment and rating",
+    "alreadyReviewed": "You have already reviewed this product.",
+    "notPurchased": "You haven’t purchased this product yet.",
+    "blockedContent": "Your review contains prohibited content and was not published.",
+    "sentWithCensor": "Review submitted (some words were censored)",
+    "sentSuccessfully": "Review submitted successfully!",
+    "sendError": "Error submitting review",
+    "writeReview": "Write Review",
+    "placeholder": "Share your experience...",
+    "anonymous": "Submit review anonymously",
+    "sending": "Sending...",
+    "sendReview": "Submit Review"
+  },
+  "ReviewList": {
+    "loading": "Loading reviews...",
+    "noReviews": "This product has no reviews yet.",
+    "title": "Review List",
+    "anonymousUser": "Anonymous User",
+    "anonymousNotice": "Anonymous review (visible only to admin)"
+  },
+  "Steps": {
+    "orderPlaced": "Order Placed",
+    "processing": "Processing",
+    "shipped": "Order Shipped",
+    "delivered": "Order Delivered"
+  }
+}

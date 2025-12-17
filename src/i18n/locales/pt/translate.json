@@ -1,0 +1,318 @@
+  {
+  "navbar": {
+    "home": "Início",
+    "all_products": "Produtos",
+    "contact_us": "Contato",
+    "my_orders": "Meus Pedidos",
+    "logout": "Sair",
+    "login": "Entrar",
+    "language": "Idioma",
+    "view_cart": "Ver Carrinho",
+    "site_name": "MINHA LOJA",
+    "items": "Itens",
+    "subtotal": "Subtotal",
+    "admin": "ADMIN",
+    "view_dashboard": "Ver Dashboard",
+    "welcome": "Bem-vindo",
+    "logout_success": "Você saiu com sucesso!"},
+  "hero": {
+    "slogan1": "O seu lugar para escolher",
+    "slogan2": "Aproveite!",
+    "shop_now": "Comprar Agora",
+    "tags": ["Celular", "Eletro", "Bolsa", "Roupa", "Joia", "Qualquer coisa!"]},
+  "cart": {
+    "items": "Item",
+    "no_item": "Parece que você não tem items no carrinho.",
+    "explore_more": "Clique aqui para ver a loja.",
+    "actions": "Ações",
+    "qty": "Qtd:",
+    "total": "Total",
+    "continue": "Continue comprando",
+    "total_itens": "Total de items:",
+    "subtotal": "Subtotal",
+    "tax": "Frete e outras taxas serão calculados no checkout",
+    "logintocheckout": "Faça login para continuar",
+    "page_name": "Carrinho de compras",
+    "buy": "COMPRAR"},
+  "modal": {
+    "login_modal": "Login",
+    "register_modal": "Cadastro"},
+  "loader": {
+    "pls_wait": "Aguarde, carregando..."},
+  "breadcrumbs": {
+    "home": "Início",
+    "products": "Produtos"},
+  "productfilter": {
+    "categories": "Categorias",
+    "all_categories": "Todas",
+    "brand": "Marca",
+    "all_brands": "Todas",
+    "price": "Preço",
+    "clear_filters": "Limpar Filtros"},
+  "productlist": {
+    "products_found": "Produtos encontrados",
+    "sort_by": "Ordenar por:",
+    "sort_latest": "Mais recentes",
+    "sort_lowest_price": "Preço mais baixo",
+    "sort_highest_price": "Preço mais alto",
+    "sort_a2z": "Nome (A - Z)",
+    "sort_z2a": "Nome (Z - A)",
+    "show_filters": "Mostrar filtros",
+    "back_to_top": "Voltar ao topo"},
+  "search": {
+    "search_bar": "Procurar"},
+  "contact": {
+    "page_title": "Contato",
+
+    "info_title": "Informações de Contato",
+    "info_description": "Preencha o formulário ou entre em contato por outros canais",
+
+    "form_title": "Fale Conosco",
+
+    "name_label": "Nome:",
+    "name_placeholder": "Nome completo",
+
+    "email_label": "E-mail:",
+    "email_placeholder": "E-mail ativo",
+
+    "subject_label": "Assunto:",
+    "subject_placeholder": "Assunto",
+
+    "message_label": "Mensagem:",
+
+    "send_message": "Enviar mensagem",
+    "sending": "Enviando...",
+
+    "success_message": "Mensagem enviada com sucesso! Entraremos em contato em breve.",
+    "error_message": "Algo deu errado. Tente novamente mais tarde."},
+  "productdetails": {
+    "title": "Detalhes do Produto",
+    "back_to_products": "Voltar para todos os produtos",
+    "sku": "SKU",
+    "brand": "Marca",
+    "add_to_cart": "Adicionar ao carrinho",
+    "reviews": "Avaliações",
+    "first_review": "Seja o primeiro a avaliar este produto"},
+  "login": {
+    "welcome": "Bem-vindo",
+    "google_button": "Entrar com Google",
+    "or_email": "ou entrar com e-mail",
+    "email_label": "Endereço de e-mail",
+    "password_label": "Senha",
+    "forgot_password": "Esqueceu a senha?",
+    "login_button": "Entrar",
+    "success": "Login realizado com sucesso",
+    "modal_title": "DESCULPE, este recurso está temporariamente desativado",
+    "modal_text": "Ainda quer testar o aplicativo? Entre em contato:",
+    "modal_emailtext": "email@test.com"},
+  "register": {
+    "title": "Criar uma nova conta",
+    "email_label": "Endereço de e-mail",
+    "password_label": "Senha",
+    "confirm_password_label": "Confirmar senha",
+    "register_button": "Cadastrar",
+    "success": "Cadastro realizado com sucesso",
+    "password_mismatch": "As senhas não coincidem"},
+  "gridview": {
+    "no_products": "Nenhum produto encontrado",
+    "free_delivery": "Entrega grátis",
+    "add_to_cart": "Adicionar ao carrinho"},
+  "listview": {
+    "no_products": "Nenhum produto encontrado",
+    "free_delivery": "Entrega grátis",
+    "add_to_cart": "Adicionar ao carrinho",
+    "view_details": "Ver detalhes"},
+  "notfound": {
+    "warning1": "Desculpe pelo incoveniente, mas não tem nada aqui",
+    "warning2": "Talvez seja melhor você voltar pra loja",
+    "link": "Voltar lá!"},
+  "orderhistory": {
+    "loading": "Carregando pedidos...",
+    "loginRequired": "Faça login para ver seus pedidos.",
+    "title": "Meus Pedidos",
+    "error": "Erro",
+    "empty": "Nenhum pedido encontrado.",
+    "order": "Pedido",
+    "total": "Total",
+    "status": "Status",
+    "date": "Data",
+    "items": "Itens",
+    "notAvailable": "—",
+    "noDate": "Sem data"},
+  "checkout": {
+    "paymentDescription": "Pagamento de {{amount}} feito por {{email}}"},
+  "checkoutdetails": {
+    "breadcrumbCart": "Carrinho",
+    "breadcrumbCheckout": "Detalhes do Checkout",
+
+    "shippingAddressTitle": "Endereço para envio",
+
+    "calculateShipping": "Calcular Frete",
+
+    "fields": {
+      "name": "Nome",
+      "line1": "Endereço",
+      "line2": "Complemento",
+      "city": "Cidade/UF",
+      "pin_code": "CEP",
+      "country": "País",
+      "phone": "Telefone"
+    }
+  },
+  "checkoutsuccess": {
+    "success1": "Parabéns, você completou sua compra com sucesso!",
+    "success2": "Gostaria de ver seus pedidos?",
+    "order-link": "VER PEDIDOS"},
+  "resetpassword": {
+    "title": "TROCAR SENHA",
+    "description": "Por favor entre com seu email do qual você não se lembra mais a senha.",
+    "emailLabel": "Email",
+    "submitButton": "Pegar nova senha",
+    "toastCheckEmail": "Cheque seu email para o link de reset",
+    "checkEmailMessage": "Cheque seu email para o ilnk de reset *(Check Spam)*"},
+  "addproducts": {
+    "titleAdd": "Adicionar Novo Produto",
+    "titleEdit": "Editar Produto",
+
+    "productName": "Nome do Produto",
+    "productPrice": "Preço do Produto",
+    "productCategory": "Categoria do Produto",
+    "chooseCategory": "-- Escolha uma Categoria de Produto --",
+    "productBrand": "Marca do Produto",
+    "productDescription": "Descrição do Produto",
+    "productImage": "Imagem do Produto",
+
+    "addButton": "Adicionar Produto",
+    "updateButton": "Atualizar Produto",
+
+    "imageUrl": "URL da Imagem",
+    "imagePreviewAlt": "Pré-visualização da imagem",
+
+    "toastImageSuccess": "Imagem enviada com sucesso",
+    "toastImageError": "Falha ao enviar a imagem",
+    "toastAddSuccess": "Produto adicionado ao banco de dados com sucesso",
+    "toastUpdateSuccess": "Produto atualizado com sucesso",
+    "toastGenericError": "Algo deu errado, verifique o console",
+    "freeShipping": "Frete Grátis"},
+  "adminBlacklist": {
+    "title": "Blacklist de Reviews",
+
+    "delete": {
+      "title": "Apagar / Não publicar review",
+      "description": "Se o review contiver qualquer uma dessas palavras ou frases, ele NÃO será publicado."
+    },
+
+    "censor": {
+      "title": "Censurar palavras / frases",
+      "description": "Essas palavras serão substituídas por ******** no review."
+    },
+
+    "input": {
+      "placeholder": "Digite palavra ou frase",
+      "add": "Adicionar",
+      "removeHint": "Clique para remover"
+    },
+
+    "toast": {
+      "updated": "Blacklist atualizada",
+      "error": "Erro ao salvar"
+    }},
+  "adminhome": {
+    "title": "Painel Administrativo",
+    "earnings": "Faturamento",
+    "products": "Produtos",
+    "orders": "Pedidos"},
+  "AdminSidebar": {
+    "home": "Início",
+    "allProducts": "Todos os Produtos",
+    "addProducts": "Adicionar Produtos",
+    "orders": "Pedidos",
+    "blacklist": "Lista Negra"},
+  "Orders": {
+    "title": "Todos os Pedidos"
+  },
+  "ViewProducts": {
+    "title": "Todos os Produtos",
+    "productsFound": "produtos encontrados",
+    "searchPlaceholder": "Buscar produto...",
+    "noProducts": "NENHUM PRODUTO ENCONTRADO",
+    "toastDeleteSuccess": "Produto removido com sucesso",
+    "table": {
+      "image": "Imagem",
+      "name": "Nome",
+      "category": "Categoria",
+      "price": "Preço",
+      "options": "Opções"
+    }},
+  "ChangeOrderStatus": {
+    "title": "Atualizar Status do Pedido",
+    "selectPlaceholder": "-- Selecione o status --",
+    "updateButton": "Atualizar status",
+    "toastSuccess": "Status do pedido alterado para {{status}}",
+    "status": {
+      "orderPlaced": "Pedido realizado",
+      "processing": "Em processamento",
+      "shipped": "Item(ns) enviado(s)",
+      "delivered": "Item(ns) entregue(s)"
+    }},
+  "OrderStatusChart": {
+    "title": "Status dos Pedidos",
+    "datasetLabel": "Quantidade de Pedidos",
+    "status": {
+      "orderPlaced": "Pedido realizado",
+      "processing": "Em processamento",
+      "shipped": "Enviado",
+      "delivered": "Entregue"
+    }
+  },
+  "Countdown": {
+    "days": "dias",
+    "hours": "horas",
+    "minutes": "min",
+    "seconds": "seg"
+  },
+  "OrderDetailsComponent": {
+    "orderDetails": "Detalhes do Pedido",
+    "orderId": "ID do Pedido",
+    "orderAmount": "Valor do Pedido",
+    "orderStatus": "Status do Pedido",
+    "recipientName": "Nome do Destinatário",
+    "phone": "Telefone",
+    "shippingAddress": "Endereço de Entrega",
+    "backToAllOrders": "Voltar para Todos os Pedidos"
+  },
+  "OrderTable": {
+    "product": "Produto",
+    "actions": "Ações",
+    "qty": "Qtd",
+    "total": "Total",
+    "writeReview": "Escrever uma Avaliação"
+  },
+  "Pagination": {
+    "page": "Página",
+    "of": "de"
+  },
+  "ReviewComponent": {
+    "fillCommentAndRating": "Preencha o comentário e a avaliação",
+    "alreadyReviewed": "Você já avaliou este produto.",
+    "notPurchased": "Você ainda não comprou este produto.",
+    "blockedContent": "Seu review contém conteúdo proibido e não foi publicado.",
+    "sentWithCensor": "Review enviado (algumas palavras foram censuradas)",
+    "sentSuccessfully": "Review enviado com sucesso!",
+    "sendError": "Erro ao enviar review",
+    "writeReview": "Escrever review",
+    "placeholder": "Compartilhe sua experiência...",
+    "anonymous": "Enviar review anonimamente",
+    "sending": "Enviando...",
+    "sendReview": "Enviar review"
+  },
+  
+  "ReviewList": {
+    "loading": "Carregando reviews...",
+    "noReviews": "Esse produto ainda não tem review.",
+    "title": "Lista de reviews",
+    "anonymousUser": "Usuário Anônimo",
+    "anonymousNotice": "Review anônimo (visível apenas para admin)"
+  }
+}
+

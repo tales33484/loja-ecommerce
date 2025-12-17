@@ -1,0 +1,12 @@
+# netlify.toml
+[build]
+  publish = "dist"            # pasta do frontend
+  command = "npm run build"   # comando para gerar build
+  
+[functions]
+  directory = "netlify/functions"  # onde estão suas serverless functions
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
