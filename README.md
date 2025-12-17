@@ -42,7 +42,7 @@ Projeto alterado de um projeto open-source, adicionando novas funções:
 - X.com: @talesfreeman
 
 ## Read Me original
-> (coloque aqui se quiser manter referência ao README original)
+
 
 
 
