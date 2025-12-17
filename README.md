@@ -1,6 +1,7 @@
 # Fullstack-Ecommerce Loja PT-BR
 
 Projeto alterado do projeto open-source abaixo, adicionando novas funções:
+
 +Tradução para diferentes línguas usando i18n.
 +Seleção de temas diferentes.
 +Pagamento stripe.
