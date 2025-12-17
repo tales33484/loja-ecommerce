@@ -15,7 +15,6 @@ Projeto alterado do projeto open-source abaixo, adicionando novas funções:
 Melhorias na segurança:
 +Segurança do firebase na escolha do admin e login do admin.
 O usuário deve ir no firebase, baixar setAccountAdmin e criar um setAdmin na pasta admin-tools.
-Exemplo de setAdmin no final da página read me.
 Nunca upar esses dois arquivos dentro da pasta admin-tools ou o folder admin-tools em si pois isso significaria problemas de segurança.
 
 +Blacklist com delete ou censor de reviews.
@@ -122,34 +121,3 @@ $ code .
 
 
 
-========
-SET ADMIN
-========
-
-// admin-tools/setAdmin.js
-
-const admin = require("firebase-admin");
-const serviceAccount = require("./serviceAccountKey.json");
-
-// ---- COLOQUE O EMAIL DO ADMIN AQUI ----
-const ADMIN_EMAIL = "COLOCAR SEU EMAIL AQUI";
-// ---------------------------------------
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
-
-(async () => {
-  try {
-    console.log("Buscando usuário...");
-    const user = await admin.auth().getUserByEmail(ADMIN_EMAIL);
-
-    console.log("Definindo claim admin...");
-    await admin.auth().setCustomUserClaims(user.uid, { admin: true });
-
-    console.log(`✔ Admin claim definido para: ${ADMIN_EMAIL}`);
-    console.log("Faça logout e login novamente para atualizar os claims.");
-  } catch (err) {
-    console.error("❌ Erro ao definir admin:", err);
-  }
-})();
