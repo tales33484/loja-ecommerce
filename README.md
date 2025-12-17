@@ -1,5 +1,3 @@
-# Fullstack-Ecommerce Loja PT-BR
-
 # Fullstack E-commerce Loja PT-BR
 
 Projeto alterado de um projeto open-source, adicionando novas funções:
