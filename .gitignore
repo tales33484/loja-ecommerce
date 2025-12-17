@@ -2,10 +2,10 @@
 logs
 *.log
 npm-debug.log*
-pnpm-debug.log*
-lerna-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Firebase admin / sensitive
 admin-tools/
@@ -40,6 +40,6 @@ dotenv
 # Test coverage
 coverage/
 
-# Package manager locks
+# Locks de outros gerenciadores de pacotes
 yarn.lock
 pnpm-lock.yaml
