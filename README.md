@@ -3,24 +3,39 @@
 Projeto alterado do projeto open-source abaixo, adicionando novas funções:
 
 +Tradução para diferentes línguas usando i18n.
+
 +Seleção de temas diferentes.
+
 +Pagamento stripe.
+
 +Calculo de frete API Melhor Envio.
+
 +Adicionado novos campos na criação de produtos, permitindo o calculo de frete ser diferente por origem, tamanho, peso.
+
 +Agrupamento por grupos caso o usuário esteja comprando muitos produtos.
+
 +Sistema básico de reviews de produtos por usuário com nota de estrelas.
+
 [alteração]Aviso frete-grátis no canto do produto aparece apenas nos produtos freeShipping true.
+
 [alteração]Pagamento ocorre todo na mesma página, deixando a interface mais humana.
 
 
 Melhorias na segurança:
+
 +Segurança do firebase na escolha do admin e login do admin.
+
 O usuário deve ir no firebase, baixar setAccountAdmin e criar um setAdmin na pasta admin-tools.
+
 Nunca upar esses dois arquivos dentro da pasta admin-tools ou o folder admin-tools em si pois isso significaria problemas de segurança.
 
+
 +Blacklist com delete ou censor de reviews.
+
 +Separação de coleções para deixar secreto a coleção que possui os endereços dos usuários no database por regra do firebase.
+
 +Carrinho estático quando se clica em "comprar" nele, deixando impossível o usuário comprar produtos em outra aba e comprá-los sem pagar frete.
+
 +Double-check no código de compra para o usuário não forçar manualmente compra sem preencher os campos de calculo de frete.
 
 
