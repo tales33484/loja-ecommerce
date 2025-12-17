@@ -1,58 +1,51 @@
 # Fullstack-Ecommerce Loja PT-BR
 
-Projeto alterado do projeto open-source abaixo, adicionando novas funções:
+# Fullstack E-commerce Loja PT-BR
 
-+Tradução para diferentes línguas usando i18n.
+Projeto alterado de um projeto open-source, adicionando novas funções:
 
-+Seleção de temas diferentes.
+## Funcionalidades adicionadas
 
-+Pagamento stripe.
+- Tradução para diferentes línguas usando **i18n**  
+- Seleção de **temas diferentes**  
+- Pagamento via **Stripe**  
+- Cálculo de frete usando a **API Melhor Envio**  
+- Novos campos na criação de produtos (permitindo cálculo de frete diferente por origem, tamanho e peso)  
+- Agrupamento por grupos caso o usuário esteja comprando muitos produtos  
+- Sistema básico de reviews de produtos por usuário com nota de estrelas  
+- **Aviso frete-grátis** no canto do produto aparece apenas nos produtos `freeShipping: true`  
+- Pagamento ocorre todo na mesma página, deixando a interface mais amigável
 
-+Calculo de frete API Melhor Envio.
+## Melhorias na segurança
 
-+Adicionado novos campos na criação de produtos, permitindo o calculo de frete ser diferente por origem, tamanho, peso.
+- Segurança do Firebase na escolha do admin e login do admin  
+  > O usuário deve ir no Firebase, baixar `setAccountAdmin` e criar um `setAdmin` na pasta `admin-tools`. **Nunca subir esses arquivos ou a pasta `admin-tools` no GitHub!**  
+- Blacklist com delete ou censor de reviews  
+- Separação de coleções para esconder endereços de usuários no database via regras do Firebase  
+- Carrinho estático ao clicar em "comprar", impedindo que o usuário compre produtos em outra aba sem pagar frete  
+- Double-check no código de compra para evitar manipulação manual
 
-+Agrupamento por grupos caso o usuário esteja comprando muitos produtos.
+## Serviços recomendados
 
-+Sistema básico de reviews de produtos por usuário com nota de estrelas.
+- Firebase  
+- Netlify  
+- Cloudinary  
+- Stripe  
+- Melhor Envio
 
-[alteração]Aviso frete-grátis no canto do produto aparece apenas nos produtos freeShipping true.
+## Loja em funcionamento
 
-[alteração]Pagamento ocorre todo na mesma página, deixando a interface mais humana.
+[https://minhalojatales.netlify.app/](https://minhalojatales.netlify.app/)
 
+## Contato
 
-Melhorias na segurança:
+- GitHub: [tales33484](https://github.com/tales33484)  
+- Email: tales.57@proton.me  
+- X.com: @talesfreeman
 
-+Segurança do firebase na escolha do admin e login do admin.
+## Read Me original
+> (coloque aqui se quiser manter referência ao README original)
 
-O usuário deve ir no firebase, baixar setAccountAdmin e criar um setAdmin na pasta admin-tools.
-
-Nunca upar esses dois arquivos dentro da pasta admin-tools ou o folder admin-tools em si pois isso significaria problemas de segurança.
-
-
-+Blacklist com delete ou censor de reviews.
-
-+Separação de coleções para deixar secreto a coleção que possui os endereços dos usuários no database por regra do firebase.
-
-+Carrinho estático quando se clica em "comprar" nele, deixando impossível o usuário comprar produtos em outra aba e comprá-los sem pagar frete.
-
-+Double-check no código de compra para o usuário não forçar manualmente compra sem preencher os campos de calculo de frete.
-
-
-Serviços recomendados:
-Firebase, Netlify, Cloudinary, Stripe, Melhor Envio.
-
-Loja em funcionamento:
-https://minhalojatales.netlify.app/
-
-
-Contato:
-https://github.com/tales33484
-tales.57@proton.me
-x.com@talesfreeman
-
-
-Read Me original:
 
 
 
