@@ -325,5 +325,44 @@
     "processing": "Processing",
     "shipped": "Order Shipped",
     "delivered": "Order Delivered"
+  },
+  "checkoutshipping": {
+    "title": "Shipping Details",
+    "freeShipping": "Free Shipping",
+    "productsFromZip": "Products – Origin ZIP {{zip}}",
+    "totalProducts": "Total products: {{qty}}",
+    "totalWeight": " | Total weight: {{weight}} kg",
+    "calculateShipping": "Calculate shipping",
+    "calculating": "Calculating...",
+    "deliveryDays": "{{days}} days",
+    "price": "Price",
+    "select": "Select",
+    "freeApplied": "Shipping applied: Free – $0.00",
+    "selectedShipping": "Selected shipping: {{company}} – ${{price}}"
+  },
+  "checkoutsummary": {
+    "orderSummary": "Order Summary",
+    "quantity": "Qty",
+    "unitPrice": "Unit Price",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "payment": "Payment",
+    "pay": "Pay",
+    "selectShippingWarning": "Calculate and select shipping to continue.",
+    "completeShippingFirst": "Complete shipping calculation to continue.",
+    "paymentSuccess": "Payment completed successfully!",
+    "paymentError": "Error processing payment"
+  },
+  "orderscomponent": {
+    "noOrders": "No orders found",
+    "openOrder": "Open order to",
+    "changeOrderStatus": "Change order status",
+    "trackOrderStatus": "Track order status",
+    "orderPlaced": "ORDER PLACED",
+    "shipTo": "SHIP TO",
+    "total": "TOTAL",
+    "id": "ID",
+    "status": "Status"
   }
 }

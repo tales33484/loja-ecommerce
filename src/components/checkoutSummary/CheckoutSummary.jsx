@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 import { formatPrice } from "../../utils/formatPrice";
 import { loadStripe } from "@stripe/stripe-js";
 import {
@@ -27,6 +28,7 @@ const stripePromise = loadStripe(
 const CheckoutForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const stripe = useStripe();
   const elements = useElements();
@@ -39,7 +41,7 @@ const CheckoutForm = () => {
 
   const [loading, setLoading] = useState(false);
 
-  // 🔐 Segurança: subtotal recalculado localmente
+  //  Segurança: subtotal recalculado localmente
   const subtotal = cartItems.reduce(
     (acc, item) => acc + Number(item.price) * (item.qty || 1),
     0
@@ -47,13 +49,13 @@ const CheckoutForm = () => {
 
   const totalAmount = subtotal + Number(shippingValue || 0);
 
-  // 🚨 REGRA FINAL DE PAGAMENTO
+  //  REGRA FINAL DE PAGAMENTO
   const canPay =
     cartItems.length > 0 &&
     shippingReady === true &&
     subtotal > 0;
 
-  // 🔐 Salvar pedido
+  //  Salvar pedido
   const saveOrder = async (purchaseId) => {
     await setDoc(doc(db, "orders", purchaseId), {
       userId,
@@ -78,16 +80,15 @@ const CheckoutForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // 🚨 BLOQUEIO TOTAL DE SEGURANÇA
+    //  BLOQUEIO TOTAL DE SEGURANÇA
     if (!stripe || !elements || !canPay) {
-      toast.warning("Finalize o cálculo do frete para continuar.");
+      toast.warning(t("checkoutsummary.completeShippingFirst"));
       return;
     }
 
     setLoading(true);
 
     try {
-      // 🔐 PaymentIntent criado SOMENTE se tudo estiver válido
       const res = await fetch(
         "/.netlify/functions/create-payment-intent",
         {
@@ -124,12 +125,12 @@ const CheckoutForm = () => {
         dispatch(clearCart());
         dispatch(clearCheckout());
 
-        toast.success("Pagamento realizado com sucesso!");
+        toast.success(t("checkoutsummary.paymentSuccess"));
         navigate("/checkout-success");
       }
     } catch (err) {
       console.error(err);
-      toast.error("Erro ao processar pagamento");
+      toast.error(t("checkoutsummary.paymentError"));
     }
 
     setLoading(false);
@@ -139,47 +140,63 @@ const CheckoutForm = () => {
     <section className="w-full max-w-4xl mx-auto mt-6 space-y-6">
       {/* RESUMO */}
       <div className="bg-base-100 p-6 rounded shadow">
-        <h2 className="text-2xl font-light mb-4">Resumo do Pedido</h2>
+        <h2 className="text-2xl font-light mb-4">
+          {t("checkoutsummary.orderSummary")}
+        </h2>
 
         {cartItems.map((item) => (
           <div key={item.id} className="border p-2 mb-2 rounded">
             <p className="font-medium">{item.name}</p>
-            <p>Qtd: {item.qty || 1}</p>
-            <p>Unitário: {formatPrice(item.price)}</p>
-            <p>Total: {formatPrice(item.price * (item.qty || 1))}</p>
+            <p>
+              {t("checkoutsummary.quantity")}: {item.qty || 1}
+            </p>
+            <p>
+              {t("checkoutsummary.unitPrice")}: {formatPrice(item.price)}
+            </p>
+            <p>
+              {t("checkoutsummary.total")}:{" "}
+              {formatPrice(item.price * (item.qty || 1))}
+            </p>
           </div>
         ))}
 
         <div className="border-t mt-4 pt-2 space-y-1">
-          <p>Subtotal: {formatPrice(subtotal)}</p>
-          <p>Frete: {formatPrice(Number(shippingValue || 0))}</p>
+          <p>
+            {t("checkoutsummary.subtotal")}: {formatPrice(subtotal)}
+          </p>
+          <p>
+            {t("checkoutsummary.shipping")}:{" "}
+            {formatPrice(Number(shippingValue || 0))}
+          </p>
           <p className="font-bold text-lg">
-            Total: {formatPrice(totalAmount)}
+            {t("checkoutsummary.total")}: {formatPrice(totalAmount)}
           </p>
         </div>
       </div>
 
       {/* PAGAMENTO */}
       <div className="bg-base-100 p-6 rounded shadow">
-        <h2 className="text-xl font-light mb-4">Pagamento</h2>
+        <h2 className="text-xl font-light mb-4">
+          {t("checkoutsummary.payment")}
+        </h2>
 
         <form onSubmit={handleSubmit}>
-          <CardElement className="border p-4 rounded mb-4" 
-          options={{
-            hidePostalCode: true,
-          }}/>
+          <CardElement
+            className="border p-4 rounded mb-4"
+            options={{ hidePostalCode: true }}
+          />
 
           <button
             type="submit"
             className="btn btn-primary w-full"
             disabled={loading || !canPay}
           >
-            {loading ? <Loader /> : "Pagar"}
+            {loading ? <Loader /> : t("checkoutsummary.pay")}
           </button>
 
           {!shippingReady && (
             <p className="text-sm text-warning mt-3">
-              Calcule e selecione o frete para continuar.
+              {t("checkoutsummary.selectShippingWarning")}
             </p>
           )}
         </form>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 import {
   saveShippingValue,
   saveShippingReady,
@@ -13,6 +14,8 @@ const maskCep = (cep) => {
 
 export default function CheckoutShipping({ cartItems, shippingAddress }) {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
+
   const cepDestino = shippingAddress.cep;
 
   const [groups, setGroups] = useState([]);
@@ -48,7 +51,7 @@ export default function CheckoutShipping({ cartItems, shippingAddress }) {
       });
     }
 
-    // Fretes pagos por CEP
+    // Fretes pagos
     Object.entries(paidGroups).forEach(([zip, products], index) => {
       allGroups.push({
         id: `paid-${index}`,
@@ -66,12 +69,11 @@ export default function CheckoutShipping({ cartItems, shippingAddress }) {
 
     setGroups(allGroups);
 
-    // ✅ CASO 100% FRETE GRÁTIS → LIBERA AUTOMÁTICO
+    // Caso 100% frete grátis
     if (Object.keys(paidGroups).length === 0 && freeGroup.length > 0) {
       dispatch(saveShippingValue(0));
       dispatch(saveShippingReady(true));
     } else {
-      // se existir qualquer grupo pago, bloqueia até seleção
       dispatch(saveShippingReady(false));
       dispatch(saveShippingValue(0));
       setSelectedFreights({});
@@ -79,7 +81,7 @@ export default function CheckoutShipping({ cartItems, shippingAddress }) {
   }, [cartItems, dispatch]);
 
   // ===============================
-  // CALCULAR FRETE (API)
+  // CALCULAR FRETE
   // ===============================
   const calculateShipping = async (group) => {
     if (!group.zip) return;
@@ -117,7 +119,7 @@ export default function CheckoutShipping({ cartItems, shippingAddress }) {
   };
 
   // ===============================
-  // SELECIONAR OPÇÃO DE FRETE
+  // SELECIONAR FRETE
   // ===============================
   const selectOption = (group, option) => {
     const updated = { ...selectedFreights, [group.id]: option };
@@ -130,7 +132,6 @@ export default function CheckoutShipping({ cartItems, shippingAddress }) {
 
     dispatch(saveShippingValue(total));
 
-    // verifica se todos os pagos foram selecionados
     const paidGroups = groups.filter((g) => g.type === "paid");
     const allSelected = paidGroups.every((g) => updated[g.id]);
 
@@ -139,7 +140,9 @@ export default function CheckoutShipping({ cartItems, shippingAddress }) {
 
   return (
     <div className="w-full max-w-3xl mx-auto mt-10 space-y-6">
-      <h1 className="text-2xl font-bold mb-4">Detalhes do Frete</h1>
+      <h1 className="text-2xl font-bold mb-4">
+        {t("checkoutshipping.title")}
+      </h1>
 
       {groups.map((group) => (
         <div
@@ -150,14 +153,20 @@ export default function CheckoutShipping({ cartItems, shippingAddress }) {
         >
           <h3 className="font-bold mb-2">
             {group.type === "free"
-              ? "Frete Grátis"
-              : `Produtos – CEP de origem ${maskCep(group.zip)}`}
+              ? t("checkoutshipping.freeShipping")
+              : t("checkoutshipping.productsFromZip", {
+                  zip: maskCep(group.zip),
+                })}
           </h3>
 
           <p className="text-sm mb-2">
-            Total de produtos: {group.totalQuantity}
+            {t("checkoutshipping.totalProducts", {
+              qty: group.totalQuantity,
+            })}
             {group.type === "paid" &&
-              ` | Peso total: ${group.totalWeight.toFixed(2)} kg`}
+              t("checkoutshipping.totalWeight", {
+                weight: group.totalWeight.toFixed(2),
+              })}
           </p>
 
           <ul className="mb-2">
@@ -178,8 +187,8 @@ export default function CheckoutShipping({ cartItems, shippingAddress }) {
                   disabled={loadingGroup === group.id}
                 >
                   {loadingGroup === group.id
-                    ? "Calculando..."
-                    : "Calcular frete"}
+                    ? t("checkoutshipping.calculating")
+                    : t("checkoutshipping.calculateShipping")}
                 </button>
               ) : (
                 <div className="mt-4 space-y-2">
@@ -191,15 +200,20 @@ export default function CheckoutShipping({ cartItems, shippingAddress }) {
                       <div>
                         <p className="font-semibold">{opt.company}</p>
                         <p>
-                          {opt.name} – {opt.delivery_time} dias
+                          {opt.name} –{" "}
+                          {t("checkoutshipping.deliveryDays", {
+                            days: opt.delivery_time,
+                          })}
                         </p>
-                        <p>Valor: R$ {opt.price}</p>
+                        <p>
+                          {t("checkoutshipping.price")}: R$ {opt.price}
+                        </p>
                       </div>
                       <button
                         className="btn btn-sm btn-primary"
                         onClick={() => selectOption(group, opt)}
                       >
-                        Selecionar
+                        {t("checkoutshipping.select")}
                       </button>
                     </div>
                   ))}
@@ -211,15 +225,17 @@ export default function CheckoutShipping({ cartItems, shippingAddress }) {
           {/* FRETE GRÁTIS */}
           {group.type === "free" && (
             <div className="mt-4 p-3 bg-success text-success-content rounded">
-              Frete aplicado: Grátis – R$ 0,00
+              {t("checkoutshipping.freeApplied")}
             </div>
           )}
 
           {/* FRETE SELECIONADO */}
           {selectedFreights[group.id] && group.type === "paid" && (
             <div className="mt-4 p-3 bg-success text-success-content rounded">
-              Frete selecionado: {selectedFreights[group.id].company} – R$
-              {selectedFreights[group.id].price}
+              {t("checkoutshipping.selectedShipping", {
+                company: selectedFreights[group.id].company,
+                price: selectedFreights[group.id].price,
+              })}
             </div>
           )}
         </div>

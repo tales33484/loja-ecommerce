@@ -313,6 +313,46 @@
     "title": "Lista de reviews",
     "anonymousUser": "Usuário Anônimo",
     "anonymousNotice": "Review anônimo (visível apenas para admin)"
+  },
+  "checkoutshipping": {
+    "title": "Detalhes do Frete",
+    "freeShipping": "Frete Grátis",
+    "productsFromZip": "Produtos – CEP de origem {{zip}}",
+    "totalProducts": "Total de produtos: {{qty}}",
+    "totalWeight": " | Peso total: {{weight}} kg",
+    "calculateShipping": "Calcular frete",
+    "calculating": "Calculando...",
+    "deliveryDays": "{{days}} dias",
+    "price": "Valor",
+    "select": "Selecionar",
+    "freeApplied": "Frete aplicado: Grátis – R$ 0,00",
+    "selectedShipping": "Frete selecionado: {{company}} – R$ {{price}}"
+  },
+  "checkoutsummary": {
+    "orderSummary": "Resumo do Pedido",
+    "quantity": "Qtd",
+    "unitPrice": "Unitário",
+    "subtotal": "Subtotal",
+    "shipping": "Frete",
+    "total": "Total",
+    "payment": "Pagamento",
+    "pay": "Pagar",
+    "selectShippingWarning": "Calcule e selecione o frete para continuar.",
+    "completeShippingFirst": "Finalize o cálculo do frete para continuar.",
+    "paymentSuccess": "Pagamento realizado com sucesso!",
+    "paymentError": "Erro ao processar pagamento"
+  },
+  "orderscomponent": {
+    "noOrders": "Nenhum pedido encontrado",
+    "openOrder": "Abra o pedido para",
+    "changeOrderStatus": "Alterar status do pedido",
+    "trackOrderStatus": "Acompanhar status do pedido",
+    "orderPlaced": "PEDIDO REALIZADO",
+    "shipTo": "ENVIAR PARA",
+    "total": "TOTAL",
+    "id": "ID",
+    "status": "Status"
   }
+
 }
 
