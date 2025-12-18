@@ -23,7 +23,7 @@ Projeto alterado de um projeto open-source, adicionando novas funções:
 - Carrinho estático ao clicar em "comprar", impedindo que o usuário compre produtos em outra aba sem pagar frete  
 - Double-check no código de compra para evitar manipulação manual
 
-## Serviços recomendados
+## Usados nesse projeto:
 
 - Firebase  
 - Netlify  
