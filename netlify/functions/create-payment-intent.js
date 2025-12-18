@@ -16,7 +16,10 @@ export async function handler(event) {
 
     const paymentIntent = await stripe.paymentIntents.create({
       amount,
-      currency: "brl", // ou "usd" se quiser
+      currency: "brl",
+      automatic_payment_methods: {
+        enabled: true
+      } // ou "usd" se quiser
     });
 
     return {

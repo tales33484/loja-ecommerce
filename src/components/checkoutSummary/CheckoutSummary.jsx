@@ -164,7 +164,10 @@ const CheckoutForm = () => {
         <h2 className="text-xl font-light mb-4">Pagamento</h2>
 
         <form onSubmit={handleSubmit}>
-          <CardElement className="border p-4 rounded mb-4" />
+          <CardElement className="border p-4 rounded mb-4" 
+          options={{
+            hidePostalCode: true,
+          }}/>
 
           <button
             type="submit"
