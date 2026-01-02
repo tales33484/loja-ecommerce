@@ -1,45 +1,127 @@
-# Fullstack E-commerce Loja PT-BR
+# Fullstack E-commerce – Loja (PT-BR)
 
-Projeto alterado de um projeto open-source, adicionando novas funções:
+Projeto baseado e adaptado a partir de um projeto **open-source**, com a adição de novas funcionalidades, melhorias de segurança e integrações modernas para um e-commerce completo.
 
-## Funcionalidades adicionadas
+---
 
-- Tradução para diferentes línguas usando **i18n**  
-- Seleção de **temas diferentes**  
-- Pagamento via **Stripe**  
-- Cálculo de frete usando a **API Melhor Envio**  
-- Novos campos na criação de produtos (permitindo cálculo de frete diferente por origem, tamanho e peso)  
-- Agrupamento por grupos caso o usuário esteja comprando muitos produtos  
-- Sistema básico de reviews de produtos por usuário com nota de estrelas  
-- **Aviso frete-grátis** no canto do produto aparece apenas nos produtos `freeShipping: true`  
-- Pagamento ocorre todo na mesma página, deixando a interface mais amigável
+## 🚀 Funcionalidades Adicionadas
 
-## Melhorias na segurança
+* 🌍 Tradução para múltiplos idiomas utilizando **i18n**
+* 🎨 Seleção de **temas diferentes** (UI customizável)
+* 💳 Pagamentos integrados com **Stripe**
+* 🚚 Cálculo de frete em tempo real via **API Melhor Envio**
+* 📦 Novos campos na criação de produtos (origem, peso e dimensões para cálculo de frete)
+* 🧮 Agrupamento inteligente de produtos em compras com grande volume
+* ⭐ Sistema básico de **reviews por usuário**, com avaliação por estrelas
+* 🏷️ Aviso de **frete grátis** exibido apenas para produtos com `freeShipping: true`
+* 🧾 Checkout realizado em **uma única página**, melhorando a experiência do usuário
 
-- Segurança do Firebase na escolha do admin e login do admin  
-  > O usuário deve ir no Firebase, baixar `setAccountAdmin` e criar um `setAdmin` na pasta `admin-tools`. **Nunca subir esses arquivos ou a pasta `admin-tools` no GitHub!**  
-- Blacklist com delete ou censor de reviews  
-- Separação de coleções para esconder endereços de usuários no database via regras do Firebase  
-- Carrinho estático ao clicar em "comprar", impedindo que o usuário compre produtos em outra aba sem pagar frete  
-- Double-check no código de compra para evitar manipulação manual
+---
 
-## Usados nesse projeto:
+## 🔐 Melhorias de Segurança
 
-- Firebase  
-- Netlify  
-- Cloudinary  
-- Stripe  
-- Melhor Envio
+* 🔒 Regras avançadas de segurança no **Firebase** para controle de login e permissões de administrador
 
-## Loja em funcionamento
+  > O administrador deve gerar manualmente os arquivos `setAccountAdmin` e `setAdmin` dentro da pasta `admin-tools`.
+  > ⚠️ **Nunca subir a pasta `admin-tools` ou seus arquivos no GitHub.**
 
+* 🚫 Sistema de **blacklist** para remoção ou censura de reviews inadequados
+
+* 🗂️ Separação de coleções no Firestore para proteger endereços de usuários via regras de segurança
+
+* 🛒 Carrinho de compras **estático** após clicar em "comprar", evitando manipulação em múltiplas abas
+
+* ✅ Double-check no fluxo de pagamento para prevenir alterações manuais nos valores
+
+---
+
+## 🧰 Tecnologias Utilizadas
+
+### Linguagens
+
+* **JavaScript** – linguagem principal do projeto
+* **HTML5 / CSS3** – estrutura e estilização da interface
+
+### Frontend
+
+* **Vite** – build tool e bundler moderno para alta performance
+* **Tailwind CSS** – framework utilitário para estilização responsiva
+
+### Backend & Integrações
+
+* **Netlify Functions** – backend serverless
+* **Stripe API** – processamento de pagamentos
+* **Melhor Envio API** – cálculo de frete
+* **Cloudinary** – armazenamento e entrega de imagens
+
+### Plataformas & Serviços
+
+* **Firebase** – autenticação, banco de dados (Firestore) e regras de segurança
+* **Netlify** – deploy contínuo e hospedagem da aplicação
+
+---
+
+## 🏗️ Arquitetura do Software (Visão Geral)
+
+```
+Frontend (Vite + JS + Tailwind)
+        |
+        v
+Netlify (Hosting)
+        |
+        v
+Netlify Functions (Serverless Backend)
+        |
+        +--> Stripe API (Pagamentos)
+        +--> Melhor Envio API (Frete)
+        |
+        v
+Firebase (Auth + Firestore + Rules)
+        |
+        v
+Cloudinary (Imagens)
+```
+
+---
+
+## 🌐 Loja em Funcionamento
+
+🔗 **Demo:**
 [https://minhalojatales.netlify.app/](https://minhalojatales.netlify.app/)
 
-## Contato
+---
 
-- GitHub: [tales33484](https://github.com/tales33484)  
-- Email: tales.57@proton.me  
-- X.com: @talesfreeman
+## 📫 Contato
+
+* GitHub: [tales33484](https://github.com/tales33484)
+* Email: [tales.57@proton.me](mailto:tales.57@proton.me)
+* X (Twitter): **@talesfreeman**
+
+---
+
+## 📜 Projeto Original (Open Source)
+
+### 💰 Eshop.com
+
+eShop.com is an e-commerce website that allows users to browse products, add items to a cart, and complete purchases. Users can register with email/password, sign in with Google, or use guest login.
+
+![preview](https://user-images.githubusercontent.com/81632171/199007839-77a2f0cd-9b25-4dec-a141-30155fbc4a20.png)
+
+### Built With (Original Project)
+
+* React.js
+* Redux Toolkit
+* Firebase
+* Node.js
+* Express.js
+* Stripe
+* Tailwind CSS
+
+**Original Developer:** Kartik Pavan
+
+
+
+
 
 ## Read Me original
 
